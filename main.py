@@ -46,7 +46,7 @@ prompt = [
     }
 ]
 print("-"*50)
-tokenized_chat = tokenizer.apply_chat_template(
+chat = tokenizer.apply_chat_template(
     prompt,
     add_generation_prompt=True,
     tokenize=False,
@@ -54,4 +54,21 @@ tokenized_chat = tokenizer.apply_chat_template(
     return_tensors="pt",
 )
 
+print(chat)
+
+print("-"*50)
+tokenized_chat = tokenizer.apply_chat_template(
+    prompt,
+    add_generation_prompt=True,
+    tokenize=True,
+    padding=True,
+    return_tensors="pt",
+)
+
 print(tokenized_chat)
+
+text = "How are you?"
+
+input_ids = tokenizer(text, return_tensors="pt")["input_ids"].to(device)
+out = model(input_ids = input_ids)
+print(out)
