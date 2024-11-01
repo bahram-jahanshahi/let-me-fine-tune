@@ -1,5 +1,6 @@
 from transformers import pipeline
 import time
+import pytesseract  # Import pytesseract to resolve OCR related error
 
 # Specify the device as 0 to use the first GPU
 vision_classifier = pipeline(model="google/vit-base-patch16-224", device=0)
