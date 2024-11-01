@@ -15,4 +15,3 @@ print(out_2)
 out_3 = transcriber(inputs="https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/1.flac")
 print(out_3)
 
-
