@@ -14,3 +14,12 @@ Aslo freeze all the installed library in the requirement.txt
 pip freez > requirements.txt
 ```
 
+## Web Demo from pipelines with Gradio
+It's needed to install gradio
+```shell
+pip install gradio
+```
+then open the browser by URL http://127.0.0.1:7860  
+### Public share
+To create a public link, set `share=True` in `launch()`.  
+
